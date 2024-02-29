@@ -4,36 +4,89 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/styles/reset.css">
-  <link rel="stylesheet" type="text/css" href="/styles/fonts.css">
-  <link rel="stylesheet" type="text/css" href="/styles/global.css">
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/fonts.css">
+  <link rel="stylesheet" type="text/css" href="styles/global.css">
   <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
   <title>Common Website Features</title>
 </head>
 <body>
   <section class="hero-container">
-    <!-- Remove and add hero banner HTML -->
-    <div class="remove-assignment-content">
-      <h1>Hero Banner</h1>
+    <div class="hero-text">
+        <h1>NASA</h1>
+        <p>National Aeronautics and Space Administration</p>
     </div>
   </section>
   <section class="container content-container">
-    <!-- Remove and add content HTML -->
-    <div class="remove-assignment-content">
-      <h1>Content</h1>
-    </div>
+  <ul class="card-container">
+    <li class="card">
+      <h2>Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<button class="button-LM" role="button">Learn More</button>
+
+    </li>
+    <li class="card">
+      <img src="assets/SpaceShuttleLaunch.jpg" alt="Space Shuttle Launch">
+    </li>
+  </ul>
   </section>
   <section class="container accordion-container">
-    <!-- Remove and add accordion HTML -->
-    <div class="remove-assignment-content">
-      <h1>Accordion</h1>
+    <h2>Accordian</h2>
+    <button class="accordion">Accordian Item 1</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
+    
+    <button class="accordion">Accordian Item 2</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <button class="accordion">Accordian Item 3</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
   </section>
   <section class="footer-container">
-    <!-- Remove and add footer HTML -->
-    <div class="remove-assignment-content">
-      <h1>Footer</h1>
-    </div>
+    <iframe class="footer-item-a" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3470.524127052046!2d-95.09257292477609!3d29.559349741391966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409db01c646f73%3A0x212847ff510dada4!2sNASA%20Johnson%20Space%20Center!5e0!3m2!1sen!2sca!4v1709164455003!5m2!1sen!2sca" width="600" height="450" style="border:2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <section class="footer-item-b">
+    <h3 class="footer-text">Links</h3>
+    <p class="footer-text">Privacy Policy</p>
+    <p class="footer-text">Terms of Use</p>
+    <p class="footer-text">Accessibility</p>
+    </section>
+    <section class="footer-item-c">
+      <h3 class="footer-text">Information</h3>
+      <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+    <section class="footer-item-d">
+      <p class="footer-text">
+        Copyright Denin Lawley 
+      </p>
+      <p class="footer-text" id="copyrightyear"></p>
+      <script>
+      const d = new Date();
+      let year = d.getFullYear();
+      document.getElementById("copyrightyear").innerHTML = year;
+      </script>
+    </section>
   </section>
 </body>
 </html>
