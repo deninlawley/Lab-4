@@ -13,7 +13,7 @@ body, html {
 }
 
 .hero-container {
-background-image: url("assets/SpaceShuttleLanding.jpg");
+background-image: url("/assets/SpaceShuttleLanding.jpg");
 height: 75%;
 background-position: center;
 background-repeat: no-repeat;
